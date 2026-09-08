@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d349218f95fc9e34db5fbe20b723b909, type: 3}
+  m_Name: ChefDialogueChainObject
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueChainObject
+  Dialogue:
+    DialogObject: {fileID: 11400000, guid: 4f95c3130e668ab428a77216bbbc185a, type: 2}
+    Responses:
+    - ResponseObject: {fileID: 11400000, guid: bc5d14ca287a41a4395c0421bc7f41a8, type: 2}
+      NextDialogue:
+        DialogObject: {fileID: 11400000, guid: 32fd4b18545401947ae9d0e6cc96bc1e, type: 2}
+        Responses:
+        - ResponseObject: {fileID: 11400000, guid: 27b0ed25ebc028645be600505526a472, type: 2}
+          NextDialogue:
+            DialogObject: {fileID: 11400000, guid: 08ed862ffcf29a3419ae4c06f9713287, type: 2}
+            Responses: []
+    - ResponseObject: {fileID: 11400000, guid: 20e3e8844cddd144b90b7f37c6053b16, type: 2}
+      NextDialogue:
+        DialogObject: {fileID: 11400000, guid: c38b647b9d43a7349b53dbc0a9cb28b6, type: 2}
+        Responses:
+        - ResponseObject: {fileID: 11400000, guid: 27b0ed25ebc028645be600505526a472, type: 2}
+          NextDialogue:
+            DialogObject: {fileID: 11400000, guid: 08ed862ffcf29a3419ae4c06f9713287, type: 2}
+            Responses: []
