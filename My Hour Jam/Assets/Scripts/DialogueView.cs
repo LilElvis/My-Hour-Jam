@@ -1,5 +1,7 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace mhj
 {
@@ -25,11 +27,22 @@ namespace mhj
             DialogueText.text = dialogue;
         }
 
-        public void CreateDialogueResponseOptions()
+        public void CreateDialogueResponseOption(ResponseObject responseObject, Action onResponsePressed)
         {
-            ClearAllDialogueResponseOptions();
-
             var option = Instantiate(DialogueResponseOptionPrefab, DialogueResponseHandle);
+            var responseText = option.GetComponentInChildren<TMP_Text>();
+            responseText.text = responseObject.ResponseText;
+            var responseButton = option.GetComponent<Button>();
+            responseButton.onClick.AddListener(() => { onResponsePressed?.Invoke(); });
+        }
+
+        public void CreateContinueOption(Action onContinuePressed)
+        {
+            var option = Instantiate(DialogueResponseOptionPrefab, DialogueResponseHandle);
+            var responseText = option.GetComponentInChildren<TMP_Text>();
+            responseText.text = "(Continue.)";
+            var responseButton = option.GetComponent<Button>();
+            responseButton.onClick.AddListener(() => { onContinuePressed?.Invoke(); });
         }
 
         public void ClearAllDialogueResponseOptions()

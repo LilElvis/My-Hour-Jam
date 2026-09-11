@@ -7,13 +7,12 @@ namespace mhj
     public class MenuController : MonoBehaviour
     {
         public Button StartButton;
-        public Button ExittButton;
-
+        public Button ExitButton;
 
         void Awake()
         {
             StartButton.onClick.AddListener(_onStartButtonPressedCallback);
-            ExittButton.onClick.AddListener(_onExitButtonPressedCallback);
+            ExitButton.onClick.AddListener(_onExitButtonPressedCallback);
         }
 
         void Update()

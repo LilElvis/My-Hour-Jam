@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 769082073}
   - component: {fileID: 769082072}
   m_Layer: 5
-  m_Name: ExittButton
+  m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::mhj.MenuController
   StartButton: {fileID: 2112160230}
-  ExittButton: {fileID: 769082072}
+  ExitButton: {fileID: 769082072}
 --- !u!4 &1704169344
 Transform:
   m_ObjectHideFlags: 0

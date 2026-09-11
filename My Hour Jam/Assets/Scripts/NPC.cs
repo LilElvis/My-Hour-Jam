@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,12 +6,13 @@ namespace mhj
 {
     public class NPC : MonoBehaviour
     {
-        DialogueController DialogueController;
+        private Action<DialogueChainObject> _onNpcClicked;
         public Button NpcButton;
+        public DialogueChainObject DialogueChain;
 
-        public void Init(DialogueController dialogueController)
+        public void Init(Action<DialogueChainObject> onNpcClicked)
         {
-            DialogueController = dialogueController;
+            _onNpcClicked = onNpcClicked;
         }
 
         public void MakeInteractable()
@@ -25,12 +27,12 @@ namespace mhj
 
         private void Start()
         {
-            NpcButton.onClick.AddListener(_npcButtonClickedCallback);
+            NpcButton.onClick.AddListener(_npcButtonPressedCallback);
         }
 
-        private void _npcButtonClickedCallback()
+        private void _npcButtonPressedCallback()
         {
-            Debug.Log("NPC was clicked!");
+            _onNpcClicked?.Invoke(DialogueChain);
         }
     }
 }
