@@ -1,14 +1,13 @@
-
 using System;
 using UnityEngine;
 
 namespace mhj
 {
     [Serializable]
-    public class Response
+    [CreateAssetMenu(fileName = "Response", menuName = "Scriptable Objects/Response")]
+    public class Response : ScriptableObject
     {
-        [SerializeReference]
-        public ResponseObject ResponseObject;
-        public Dialogue NextDialogue;
+        [SerializeReference] public ResponseText ResponseText = null;
+        [SerializeReference] public Dialogue NextDialogue = new Dialogue();
     }
 }

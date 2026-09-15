@@ -27,11 +27,11 @@ namespace mhj
             DialogueText.text = dialogue;
         }
 
-        public void CreateDialogueResponseOption(ResponseObject responseObject, Action onResponsePressed)
+        public void CreateDialogueResponseOption(ResponseText responseObject, Action onResponsePressed)
         {
             var option = Instantiate(DialogueResponseOptionPrefab, DialogueResponseHandle);
             var responseText = option.GetComponentInChildren<TMP_Text>();
-            responseText.text = responseObject.ResponseText;
+            responseText.text = responseObject.String;
             var responseButton = option.GetComponent<Button>();
             responseButton.onClick.AddListener(() => { onResponsePressed?.Invoke(); });
         }

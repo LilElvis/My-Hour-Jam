@@ -6,11 +6,11 @@ namespace mhj
 {
     public class OOI : MonoBehaviour
     {
-        private Action<InspectionObject> _onOoiClicked;
+        private Action<InspectionText> _onOoiClicked;
         public Button OoiButton;
-        public InspectionObject InspectionObject;
+        public InspectionText InspectionObject;
 
-        public void Init(Action<InspectionObject> onOoiClicked)
+        public void Init(Action<InspectionText> onOoiClicked)
         {
             _onOoiClicked = onOoiClicked;
         }

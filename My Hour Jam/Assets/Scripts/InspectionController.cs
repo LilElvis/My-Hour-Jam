@@ -15,14 +15,14 @@ namespace mhj
         }
 
         private InspectionView _inspectionView;
-        private InspectionObject _currentInspectionObject = null;
+        private InspectionText _currentInspectionObject = null;
 
         public void Init(InspectionView inspectionView)
         {
             _inspectionView = inspectionView;
         }
 
-        public void EvaluateNewInspection(InspectionObject inspectionObject)
+        public void EvaluateNewInspection(InspectionText inspectionObject)
         {
             _currentInspectionObject = inspectionObject;
 
@@ -33,7 +33,7 @@ namespace mhj
 
         private void _updateInspectionView()
         {
-            _inspectionView.SetInspectionText(_currentInspectionObject.InspectionText);
+            _inspectionView.SetInspectionText(_currentInspectionObject.String);
 
             _inspectionView.CreateContinueOption(() => { _onContinuePressedCallback(); });
         }

@@ -6,11 +6,11 @@ namespace mhj
 {
     public class NPC : MonoBehaviour
     {
-        private Action<DialogueChainObject> _onNpcClicked;
+        private Action<DialogueChain> _onNpcClicked;
         public Button NpcButton;
-        public DialogueChainObject DialogueChain;
+        public DialogueChain DialogueChain;
 
-        public void Init(Action<DialogueChainObject> onNpcClicked)
+        public void Init(Action<DialogueChain> onNpcClicked)
         {
             _onNpcClicked = onNpcClicked;
         }

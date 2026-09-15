@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0187c256c3a399e4797d0f932f629dc6, type: 3}
+  m_Name: ChefHowAreYou
+  m_EditorClassIdentifier: Assembly-CSharp::mhj.Response
+  ResponseText: {fileID: 11400000, guid: bc5d14ca287a41a4395c0421bc7f41a8, type: 2}
+  NextDialogue:
+    rid: 3265663125763129493
+  references:
+    version: 2
+    RefIds:
+    - rid: 3265663125763129493
+      type: {class: Dialogue, ns: mhj, asm: Assembly-CSharp}
+      data:
+        DialogueText: {fileID: 11400000, guid: 32fd4b18545401947ae9d0e6cc96bc1e, type: 2}
+        Responses:
+        - {fileID: 11400000, guid: b79f2d6bbdace824597aaa37b1ce1174, type: 2}

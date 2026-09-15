@@ -15,7 +15,7 @@ namespace mhj
         }
 
         private DialogueView _dialogueView;
-        private DialogueChainObject _currentDialogueChain = null;
+        private DialogueChain _currentDialogueChain = null;
         private Dialogue _currentDialogue = null;
 
         public void Init(DialogueView dialogueView)
@@ -23,7 +23,7 @@ namespace mhj
             _dialogueView = dialogueView;
         }
 
-        public void EvaluateNewDialogueChain(DialogueChainObject dialogueChain)
+        public void EvaluateNewDialogueChain(DialogueChain dialogueChain)
         {
             _currentDialogueChain = dialogueChain;
 
@@ -38,13 +38,13 @@ namespace mhj
         {
             _dialogueView.ClearAllDialogueResponseOptions();
 
-            _dialogueView.SetDialogueText(_currentDialogue.DialogObject.DialogueText);
+            _dialogueView.SetDialogueText(_currentDialogue.DialogueText.String);
 
             if (_currentDialogue.Responses.Length > 0)
             {
                 foreach (Response response in _currentDialogue.Responses)
                 {
-                    _dialogueView.CreateDialogueResponseOption(response.ResponseObject, () => { _onResponsePressedCallback(response.NextDialogue); });
+                    _dialogueView.CreateDialogueResponseOption(response.ResponseText, () => { _onResponsePressedCallback(response.NextDialogue); });
                 }
             }
             else

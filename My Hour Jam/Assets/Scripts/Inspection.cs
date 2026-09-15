@@ -6,7 +6,6 @@ namespace mhj
     [Serializable]
     public class Inspection
     {
-        [SerializeReference]
-        public InspectionObject InspectionObject;
+        [SerializeReference] public InspectionText InspectionText = null;
     }
 }

@@ -34,14 +34,14 @@ namespace mhj
             }
         }
 
-        private void _onNpcPressedCallback(DialogueChainObject dialogueChain)
+        private void _onNpcPressedCallback(DialogueChain dialogueChain)
         {
             _disableInteractions();
 
             _dialogueController.EvaluateNewDialogueChain(dialogueChain);
         }
 
-        private void _onOoiPressedCallback(InspectionObject inspectionObject)
+        private void _onOoiPressedCallback(InspectionText inspectionObject)
         {
             _disableInteractions();
 

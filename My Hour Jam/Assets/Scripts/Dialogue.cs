@@ -6,8 +6,7 @@ namespace mhj
     [Serializable]
     public class Dialogue
     {
-        [SerializeReference]
-        public DialogueObject DialogObject;
-        public Response[] Responses;
+        [SerializeReference] public DialogueText DialogueText = null;
+        public Response[] Responses = new Response[0];
     }
 }
